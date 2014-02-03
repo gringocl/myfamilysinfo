@@ -29,4 +29,5 @@ end
 group :test do
   gem "minitest-rails-capybara", "0.10.0"
   gem "launchy", "2.4.2"
+  gem 'turn'
 end
