@@ -9,7 +9,7 @@ require 'turn/autorun'
 
 Turn.config do |c|
     c.format = :outline
-    c.trace = "20"
+    c.trace = "0"
     c.natural = true
     c.verbose = true
 end
@@ -26,4 +26,9 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 
-
+def sign_in(role = :editor)
+  visit new_user_session_path
+  fill_in "Email", with: users(role).email
+  fill_in "Password", with: "password"
+  page.find("[type='submit']").click
+end
