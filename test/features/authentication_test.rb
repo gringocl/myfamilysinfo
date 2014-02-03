@@ -1,10 +1,10 @@
 require "test_helper"
 
-feature "Sign in" do
-  scenario "user can sign in" do
+feature "Home Screen" do
+  scenario "beautiful home screen" do
     visit root_path
-    sign_in
-    page.must_have_content "Hello World"
-    page.wont_have_content "Goobye All!"
+    #save_and_open_page
+    page.must_have_content "Sign up"
+
   end
 end

@@ -1,15 +1,15 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path("../../config/environment", __FILE__)
 require "rails/test_help"
-#require "minitest/rails"
+require "minitest/rails"
 require "minitest/rails/capybara"
 #require "minitest/pride"
-require 'pry-rescue/minitest'
+#require 'pry-rescue/minitest'
 require 'turn/autorun'
 
 Turn.config do |c|
     c.format = :outline
-    c.trace = "0"
+    c.trace = "20"
     c.natural = true
     c.verbose = true
 end
@@ -26,9 +26,4 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 
-def sign_in(role = :editor)
-  visit new_user_session_path
-  fill_in "Email", with: users(role).email
-  fill_in "Password", with: "password"
-  page.find("[type='submit']").click
-end
+

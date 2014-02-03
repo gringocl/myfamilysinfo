@@ -219,6 +219,8 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   launchy (= 2.4.2)
+  minitest
+  minitest-rails
   minitest-rails-capybara (= 0.10.0)
   omniauth-facebook
   omniauth-twitter
