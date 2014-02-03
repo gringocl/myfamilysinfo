@@ -21,9 +21,7 @@ Fork and clone the repo and push it to heroku or your own server setup:
 
 Screenshots of your application below:
 
-![Screenshot 1](http://placekitten.com/400/300)
-
-![Screenshot 2](http://placekitten.com/400/300)
+TODO
 
 
 ### Known Issues
@@ -31,12 +29,12 @@ Screenshots of your application below:
 If you discover any bugs, feel free to create an issue on GitHub fork and
 send us a pull request.
 
-[Issues List](Github Issues List URL goes here).
+[Issues List](https://github.com/gringocl/myfamilysinfo/issues).
 
 ## Authors
 
-* Your Name (Your Github URL goes here)
-* Additional Author's name (Their Github URL goes here)
+* Liam Buell (https://github.com/Lbuell/)
+* Miles Starkenburg (https://github.com/gringocl/)
 
 
 ## Contributing
@@ -50,6 +48,6 @@ send us a pull request.
 
 ## License
 
-Your Licensing Information goes here. Example: MIT/X11.
+TODO
 
 
