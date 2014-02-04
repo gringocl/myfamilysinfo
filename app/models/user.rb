@@ -7,6 +7,10 @@ class User < ActiveRecord::Base
   validates_presence_of :username
   validates_uniqueness_of :username
 
+  has_many :relationships
+  has_many :families, through: :relationships
+  has_many :kids, through: :families
+  has_many :records, through: :kids
 
  def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_create do |user|
