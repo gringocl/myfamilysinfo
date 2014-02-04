@@ -1,6 +1,6 @@
 require "test_helper"
 
-feature "Manager your wards reminders" do
+feature "Manage your wards reminders" do
   scenario "View your wards reminders" do
     sign_in(:mother)
     click_on "#{wards(:tiny)}"
@@ -8,7 +8,7 @@ feature "Manager your wards reminders" do
     page.wont_have_content "Princess's Reminders"
   end
 
-  scenario "Add a new reminder for you ward" do
+  scenario "Add a new reminder for your ward" do
     sign_in(:mother)
     click_on "New reminder"
     fill_in "Name", with: "New reminder"
