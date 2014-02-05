@@ -1,2 +1,10 @@
-<h1>Kid#new</h1>
-<p>Find me in app/views/kid/new.html.erb</p>
+<h1>Add Kid</h1>
+
+<%= simple_form_for [:user, @kid] do |f| %>
+  <%= f.input :name %>
+  <%= f.simple_fields_for @relationship do |r| %>
+    <%= r.input :role, collection: [ "Mother", "Father"] %>
+  <% end %>
+
+  <%= f.button :submit %>
+<% end %>
