@@ -16,26 +16,26 @@ def sample_text
   #(1..10).map{|i|"<p>#{Faker::HTMLIpsum.fancy_string}</p>"}.join
 end
 
-# begin
-# 15.times do
-#   User.new.tap do |u|
-#     u.email = Faker::Internet.email
-#     u.password = 'password'
-#     u.name = Faker::Name.name
-#     u.save!
-#   end
-# end
+begin
+  15.times do
+    User.new.tap do |u|
+      u.email = Faker::Internet.email
+      u.password = 'password'
+      u.name = Faker::Name.name
+      u.save!
+    end
+  end
 
-# 45.times do
-#   Kid.new.tap do |k|
-#     k.name = Faker::Name.first_name
-#     k.save!
-#   end
-# end
+  45.times do
+    Kid.new.tap do |k|
+      k.name = Faker::Name.first_name
+      k.save!
+    end
+  end
 
-kid = Kid.all.each do |k|
-   user = User.order( 'RANDOM()' ).first
-   relation = Relationship.create ({kid: k, user: user, role: "Father"})
-   relation.save!
+  kid = Kid.all.each do |k|
+    user = User.order( 'RANDOM()' ).first
+    relation = Relationship.create ({kid: k, user: user, role: "Father"})
+    relation.save!
+  end
 end
-

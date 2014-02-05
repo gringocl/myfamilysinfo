@@ -1,11 +1,13 @@
 <h1>Add Kid</h1>
 
-<%= simple_form_for [:user, @kid] do |f| %>
-  <%= f.input :name %>
-  <%= f.simple_fields_for :relationship do |r| %>
-    <%= r.input :role, collection: [ "Mother", "Father"] %>
-    <%= r.input :user, as: :hidden, input_html: { value: current_user } %>
+
+<%= form_for [:user, @kid] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_area :name %>
+  <%= f.fields_for :relationships do |r| %>
+    <%= r.text_area :role %>
+    <%# r.input :user, as: :hidden, input_html: { value: current_user } %>
   <% end %>
 
-  <%= f.button :submit %>
+  <%= f.submit %>
 <% end %>

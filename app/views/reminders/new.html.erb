@@ -1,0 +1,9 @@
+<h1>Add Reminder For <%= @kid.name %></h1>
+
+<%= simple_form_for [:user, @kid, @reminder] do |f| %>
+  <%= f.input :name, label: 'What are you going to give me?' %>
+
+  <%= f.button :submit %>
+
+
+<% end %>

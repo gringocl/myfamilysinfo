@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
   has_many :relationships
   has_many :kids, through: :relationships
-  has_many :records, through: :kids
+  has_many :reminders, through: :kids
 
   def self.sort_by_role(user)
     roles = user.relationships.map { |relationship| relationship.role }
