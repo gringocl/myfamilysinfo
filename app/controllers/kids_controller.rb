@@ -14,7 +14,7 @@ class KidsController < ApplicationController
 
   private
     def kid_params
-      params.require(:kid).permit(:name, relationship_attributes: [:id, :user, :role])
+      params.require(:kid).permit(:name, relationships_attributes: [:user, :kid_id, :user_id, :role])
     end
 end
 
