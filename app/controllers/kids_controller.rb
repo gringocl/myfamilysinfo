@@ -8,13 +8,13 @@ class KidsController < ApplicationController
   def create
      @kid = Kid.create(kid_params)
      @relationship = Relationship.create(kid_id: @kid.id, user_id: current_user.id)
-   end
+  end
 
 
 
-   private
-     def kid_params
-      params.require(:kid).permit(:name, relationship_attributes: [:role, :user_id])
+  private
+    def kid_params
+      params.require(:kid).permit(:name, relationship_attributes: [:id, :user, :role])
+    end
+end
 
-     end
- end

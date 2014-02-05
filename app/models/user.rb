@@ -7,11 +7,12 @@ class User < ActiveRecord::Base
   validates_presence_of :username
   validates_uniqueness_of :username
 
-  has_many :relationships
+  has_many :relationships, inverse_of: :kids
   has_many :kids, through: :relationships
   has_many :records, through: :kids
 
- def self.from_omniauth(auth)
+
+  def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
