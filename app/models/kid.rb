@@ -1,5 +1,6 @@
 class Kid < ActiveRecord::Base
-  belongs_to :relationship
-  has_many :users, through: :relationship
+  has_many :relationships
+  has_many :users, through: :relationships
   has_many :records
+  accepts_nested_attributes_for :relationships
 end

@@ -8,8 +8,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username
 
   has_many :relationships
-  has_many :families, through: :relationships
-  has_many :kids, through: :families
+  has_many :kids, through: :relationships
   has_many :records, through: :kids
 
  def self.from_omniauth(auth)

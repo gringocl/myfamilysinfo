@@ -11,25 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140204204938) do
+ActiveRecord::Schema.define(version: 20140205003834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "families", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "kids", force: true do |t|
     t.string   "name"
-    t.integer  "family_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "kids", ["family_id"], name: "index_kids_on_family_id", using: :btree
 
   create_table "records", force: true do |t|
     t.string   "name"
@@ -41,14 +32,14 @@ ActiveRecord::Schema.define(version: 20140204204938) do
   add_index "records", ["kid_id"], name: "index_records_on_kid_id", using: :btree
 
   create_table "relationships", force: true do |t|
-    t.integer  "family_id"
     t.integer  "user_id"
     t.string   "role"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "kid_id"
   end
 
-  add_index "relationships", ["family_id"], name: "index_relationships_on_family_id", using: :btree
+  add_index "relationships", ["kid_id"], name: "index_relationships_on_kid_id", using: :btree
   add_index "relationships", ["user_id"], name: "index_relationships_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
