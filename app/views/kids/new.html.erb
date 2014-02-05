@@ -2,7 +2,7 @@
 
 <%= simple_form_for [:user, @kid] do |f| %>
   <%= f.input :name %>
-  <%= f.simple_fields_for :relationships do |r| %>
+  <%= f.simple_fields_for :relationship do |r| %>
     <%= r.input :role, collection: [ "Mother", "Father"] %>
     <%= r.input :user, as: :hidden, input_html: { value: current_user } %>
   <% end %>
