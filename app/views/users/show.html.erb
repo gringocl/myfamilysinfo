@@ -1,4 +1,11 @@
 <h3>User</h3>
 <p>Email: <%= @user.email if @user.email %></p>
+
 <%= link_to 'Add Kid', { controller: :kids, action: :new }, class: "button radius" %>
+
+<h4>Kids</h4>
+<%= @user.kids.each do |kid| %>
+<%= kid.name %>
+<% end %>
+
 

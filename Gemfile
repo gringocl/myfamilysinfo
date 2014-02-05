@@ -17,6 +17,7 @@ gem 'simple_form'
 gem "pundit"
 gem 'minitest'
 gem 'minitest-rails'
+gem 'ffaker'
 
 group :development do
   gem 'pry-rescue'
