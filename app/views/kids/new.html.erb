@@ -3,9 +3,9 @@
 
 <%= form_for [:user, @kid] do |f| %>
   <%= f.label :name %>
-  <%= f.text_area :name %>
+  <%= f.text_field :name %>
   <%= f.fields_for :relationships do |r| %>
-    <%= r.text_area :role %>
+    <%= r.select :role, options_for_select(["Mother","Father"]) %>
     <%# r.input :user, as: :hidden, input_html: { value: current_user } %>
   <% end %>
 
