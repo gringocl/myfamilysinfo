@@ -18,6 +18,7 @@ gem "pundit"
 gem 'minitest'
 gem 'minitest-rails'
 gem 'ffaker'
+gem 'heroku'
 
 group :development do
   gem 'pry-rescue'
