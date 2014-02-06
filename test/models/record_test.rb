@@ -1,11 +1,11 @@
 require "test_helper"
 
-describe Record do
+describe Reminder do
   before do
-    @record = Record.new
+    @reminder= Reminder.new
   end
 
   it "must be valid" do
-    @record.valid?.must_equal true
+    @reminder.valid?.must_equal true
   end
 end
