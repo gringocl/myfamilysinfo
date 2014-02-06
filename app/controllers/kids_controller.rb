@@ -12,6 +12,11 @@ class KidsController < ApplicationController
      redirect_to current_user
   end
 
+  def destroy
+    @kid = Kid.find(params[:id])
+    @kid.destroy
+  end
+
   private
     def kid_params
       params.require(:kid).permit(:name, :user_id, relationships_attributes: [:role, :user_id])

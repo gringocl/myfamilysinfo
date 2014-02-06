@@ -1,17 +1,16 @@
 class RemindersController < ApplicationController
-  def index
-    redirect_to(new_user_kid_reminder_path)
-  end
+  before_filter :authenticate_user!
+
   def new
     @kid = Kid.find(params[:kid_id])
     @reminder = @kid.reminders.build
-    #respond_with(@reminder)
   end
+
   def create
     @kid = Kid.find(params[:kid_id])
     @reminder = @kid.reminders.create(reminder_params)
     if @reminder.save
-      redirect_to current_user, notice: "Updated"
+      redirect_to current_user, notice: "#{@reminder.name} added for #{@kid.name}!"
     else
       render :new
     end
@@ -20,18 +19,18 @@ class RemindersController < ApplicationController
   def update
     @reminder = Reminder.find(params[:id])
     @reminder.touch
-    redirect_to current_user, notice: "Updated!"
+    redirect_to current_user, notice: "#{@reminder.name} reminder was updated!"
   end
+
   def destroy
     @reminder = Reminder.find(params[:id])
-    @reminder.destroy, notice: "Reminder Removed"
-    redirect_to current_user
+    @reminder.destroy
+    redirect_to current_user, notice: "#{@reminder.name} reminder was deleted!"
   end
 
-private
-
-  def reminder_params
-    params.require(:reminder).permit(:name, :kid_id)
-  end
+  private
+    def reminder_params
+      params.require(:reminder).permit(:name, :kid_id)
+    end
 end
 
