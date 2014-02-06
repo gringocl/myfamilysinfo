@@ -23,8 +23,8 @@ class KidsController < ApplicationController
 
   def destroy
     @kid = Kid.find(params[:id])
-    @kid.destroy notice: "Kid Removed"
-    redirect_to current_user
+    @kid.destroy 
+    redirect_to user_path, notice: "Kid Removed"
   end
 
   private
