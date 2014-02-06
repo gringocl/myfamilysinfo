@@ -9,7 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'devise'
 gem 'figaro'
-gem 'foundation-rails'
+gem 'foundation-rails', '5.0.3.1'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'pg'
@@ -18,6 +18,7 @@ gem "pundit"
 gem 'minitest'
 gem 'minitest-rails'
 gem 'ffaker'
+gem 'heroku'
 
 group :development do
   gem 'pry-rescue'
@@ -29,7 +30,12 @@ group :development do
   gem 'rails_layout'
 end
 
+group :production do
+  gem "rails_12factor", "0.0.2"
+end
+
 group :test do
+  gem 'simplecov'
   gem "minitest-rails-capybara", "0.10.0"
   gem "launchy", "2.4.2"
   gem 'turn'

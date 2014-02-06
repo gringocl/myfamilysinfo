@@ -1,8 +1,11 @@
 # Read about fixtures at
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-k1:
+Jimmy:
   name: Jimmy
-
-k2:
+Jenny:
   name: Jenny
+Lola:
+  name: Lola
+Billy:
+  name: Billy

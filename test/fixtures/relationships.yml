@@ -1,8 +1,15 @@
 # Read about fixtures at
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-m1:
-  role: Mother
-
-f2:
-  role: Father
+1:
+  kid: Jimmy
+  user: liam
+2:
+  kid: Jenny
+  user: mother
+3:
+  kid: Lola
+  user: miles
+4:
+  kid: Billy
+  user: mother
