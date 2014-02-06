@@ -1,6 +1,5 @@
 
 <%= link_to 'add kid', { controller: :kids, action: :new }, class: "button radius" %>
-<%= link_to 'add a kid', { controller: :kids, action: :new}, remote: 'true', class: "button radius"  %>
 
         <% @user.kids.includes(:reminders).each do |kid| %>
           <hr> <br> <%= link_to((new_user_kid_reminder_path [kid]), class: "button radius tiny") do %>
