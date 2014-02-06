@@ -7,7 +7,8 @@
 <h4>Kids</h4>
 <div class="comment">
 <% @user.kids.each do |kid| %>
-<h6><%= kid.name %></h6>
+<p><h6><%= link_to kid.name %></h6>
+  <%= link_to 'Remove Kid', class: "button radius" %></p>
   <% kid.reminders.each do |reminder| %>
     <p><%= kid.name %> took
     <strong> <%= reminder.name %></strong>

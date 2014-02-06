@@ -24,7 +24,7 @@ class RemindersController < ApplicationController
   end
   def destroy
     @reminder = Reminder.find(params[:id])
-    @reminder.destroy, notice: "Reminder Removed"
+    @reminder.destroy notice: "Reminder Removed"
     redirect_to current_user
   end
 
