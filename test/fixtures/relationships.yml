@@ -1,12 +1,8 @@
 # Read about fixtures at
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  references: 
-  references: 
-  role: MyString
+m1:
+  role: Mother
 
-two:
-  references: 
-  references: 
-  role: MyString
+f2:
+  role: Father

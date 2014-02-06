@@ -1,4 +1,9 @@
 class KidsController < ApplicationController
+
+  def index
+    @kid = Kid.all
+  end
+
   def new
     @user = current_user
     @kid = Kid.new
@@ -10,6 +15,12 @@ class KidsController < ApplicationController
      nested_params = kid_params.deep_merge(new_params)
      @kid = Kid.create(nested_params)
      redirect_to current_user
+  end
+
+  def destroy
+    @kid = Kid.find(params[:id])
+    @kid.destroy notice: "Kid Removed"
+    redirect_to current_user
   end
 
   private

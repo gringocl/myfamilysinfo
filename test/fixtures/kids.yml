@@ -1,10 +1,8 @@
 # Read about fixtures at
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
-  family: 
+k1:
+  name: Jimmy
 
-two:
-  name: MyString
-  family: 
+k2:
+  name: Jenny

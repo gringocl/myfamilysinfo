@@ -38,3 +38,7 @@ feature "Add a kid" do
     page.must_have_content "Kid Removed"
   end
 end
+<<<<<<< HEAD
+=======
+nd
+>>>>>>> tests

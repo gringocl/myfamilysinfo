@@ -5,6 +5,7 @@ Myfamilysinfo::Application.routes.draw do
 
   resources :users
 
+  get ':users/:id/', :to => "user#show"
 
   #resources :users, :path => "user"
   resource :user, controller: :users, only: :show do
