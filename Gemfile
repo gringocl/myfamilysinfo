@@ -29,6 +29,10 @@ group :development do
   gem 'rails_layout'
 end
 
+group :production do
+  gem "rails_12factor", "0.0.2"
+end
+
 group :test do
   gem 'simplecov'
   gem "minitest-rails-capybara", "0.10.0"
