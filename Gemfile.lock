@@ -66,7 +66,7 @@ GEM
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
-    foundation-rails (5.1.0.0)
+    foundation-rails (5.0.3.1)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
     hashie (2.0.5)
@@ -223,7 +223,7 @@ DEPENDENCIES
   devise
   ffaker
   figaro
-  foundation-rails
+  foundation-rails (= 5.0.3.1)
   jbuilder (~> 1.2)
   jquery-rails
   launchy (= 2.4.2)
