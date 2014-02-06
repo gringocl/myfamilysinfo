@@ -11,6 +11,7 @@ class KidsController < ApplicationController
      new_params = kid_params.merge("relationships_attributes" => { "0" => {"user_id" => current_user.id}})
      nested_params = kid_params.deep_merge(new_params)
      @kid = Kid.create(nested_params)
+     # authorize @kid
      redirect_to user_path, notice: "#{@kid.name} was added your account"
   end
 

@@ -4,4 +4,8 @@ class KidPolicy < ApplicationPolicy
       scope
     end
   end
+
+  def create?
+    @kid.users.include? user
+  end
 end
