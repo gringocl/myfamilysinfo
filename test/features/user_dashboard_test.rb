@@ -10,6 +10,4 @@ feature "User Dashboard" do
     page.must_have_button "Add Child"
     page.must_have_content "Upcoming reminders"
   end
-
-
 end

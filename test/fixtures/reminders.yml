@@ -2,13 +2,17 @@
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  kid:
-
+  name: Advil
+  kid: Jenny
 two:
-  name: MyString
-  kid:
-done:
+  name: Temperature
+  kid: Jimmy
+three:
   name: Tylenol
-  kid: Tim
-
+  kid: Lola
+four:
+  name: Tylenol
+  kid: Jenny
+five:
+  name: Food
+  kid: Lola

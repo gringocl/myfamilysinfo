@@ -4,4 +4,6 @@ liam:
 mother:
   email: mother@example.com
   encrypted_password: <%= User.new.send(:password_digest, 'password')  %>
-
+miles:
+  email: miles@example.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password')  %>

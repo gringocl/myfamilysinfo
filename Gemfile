@@ -30,6 +30,7 @@ group :development do
 end
 
 group :test do
+  gem 'simplecov'
   gem "minitest-rails-capybara", "0.10.0"
   gem "launchy", "2.4.2"
   gem 'turn'

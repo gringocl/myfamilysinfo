@@ -12,5 +12,14 @@
     <ul>
       <%= render 'layouts/navigation_links' %>
     </ul>
-  </div>
+   <ul class="right">
+    <% if current_user %>
+          <li class="divider"></li>
+              <li>
+                <%= link_to "Signed in as #{current_user.email}", user_path(current_user) %>
+                <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
+              </li>
+    <% end %>
+  </ul>
+    </div>
 </nav>
