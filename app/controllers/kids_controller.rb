@@ -9,7 +9,6 @@ class KidsController < ApplicationController
      new_params = kid_params.merge("relationships_attributes" => { "0" => {"user_id" => current_user.id}})
      nested_params = kid_params.deep_merge(new_params)
      @kid = Kid.create(nested_params)
-     #@relationship = Relationship.create(kid_id: @kid.id, user_id: current_user.id)
   end
 
 
