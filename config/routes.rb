@@ -6,7 +6,7 @@ Myfamilysinfo::Application.routes.draw do
 
 
   #resources :users, :path => "user"
-  resource :user, controller: :users, only: :show do
+  resource :user, { controller: :users, only: :show } do
     resources :kids, only: [:new, :create] do
       resources :reminders, only: [:new, :create] do
       end

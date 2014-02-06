@@ -12,7 +12,7 @@
     <p><%= kid.name %> took
     <strong> <%= reminder.name %></strong>
     <%= time_ago_in_words(reminder.updated_at) %> ago </p>
-      <%= simple_form_for [:user, kid, reminder] do |f| %>
+      <%= simple_form_for reminder do |f| %>
         <%= f.submit %>
         </div>
       <% end %>

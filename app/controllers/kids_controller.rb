@@ -1,4 +1,6 @@
 class KidsController < ApplicationController
+  before_filter :authenticate_user!
+
   def new
     @user = current_user
     @kid = Kid.new
@@ -9,12 +11,13 @@ class KidsController < ApplicationController
      new_params = kid_params.merge("relationships_attributes" => { "0" => {"user_id" => current_user.id}})
      nested_params = kid_params.deep_merge(new_params)
      @kid = Kid.create(nested_params)
-     redirect_to current_user
+     redirect_to user_path, notice: "#{@kid.name} was added your account"
   end
 
   def destroy
     @kid = Kid.find(params[:id])
     @kid.destroy
+    redirect_to user_path, notice: "#{@kid.name} was removed from your account"
   end
 
   private
