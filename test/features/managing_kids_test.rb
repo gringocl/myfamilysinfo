@@ -1,6 +1,6 @@
 require "test_helper"
 
-feature "Add a ward" do
+feature "Add a kid" do
   scenario "Add a new kid" do
     sign_in(:mother)
     click_on "Dashboard"
@@ -12,7 +12,7 @@ feature "Add a ward" do
     page.must_have_content "Remove Kid"
   end
 
-  scenario "Edit a Ward" do
+  scenario "Edit a kid" do
     sign_in(:mother)
     click_on "Dashboard"
     click_on "Add Kid"
@@ -25,7 +25,7 @@ feature "Add a ward" do
     page.must_have_content "Success"
   end
 
-  scenario "Delete a Ward" do
+  scenario "Delete a kid" do
     sign_in(:mother)
     click_on "Dashboard"
     click_on "Add Kid"
@@ -38,3 +38,4 @@ feature "Add a ward" do
     page.must_have_content "Kid Removed"
   end
 end
+nd

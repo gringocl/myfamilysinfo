@@ -30,7 +30,7 @@ feature "User authentication" do
     click_on "Cancel my account"
     page.must_have_content "Bye! Your account was successfully cancelled. We hope to see you again soon."
   end
-  
+
   scenario "A user can edit account and change password" do
     sign_in(:liam)
     click_on "Edit account"
@@ -39,6 +39,20 @@ feature "User authentication" do
     fill_in "Current password", with: "password"
     click_on "Update"
     page.must_have_content "You updated your account successfully."
+  end
+  scenario "sign in with twitter works" do
+    visit root_path
+    OmniAuth.config.test_mode = true
+    Capybara.current_session.driver.request.env['devise.mapping'] = Devise.mappings[:user]
+    Capybara.current_session.driver.request.env['omniauth.auth'] = OmniAuth.config.mock_auth[:twitter]
+    OmniAuth.config.add_mock(:twitter,
+      { uid: '12345',
+        info: { nickname: 'test_twitter_user'},
+        })
+    click_on "Sign in with Twitter"
+    #binding.pry
+    save_and_open_page
+    page.must_have_content "test_twitter_user, you are signed in!"
   end
 end
 
