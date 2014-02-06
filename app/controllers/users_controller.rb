@@ -3,7 +3,8 @@ class UsersController < ApplicationController
 
   def show
     @user = !params[:id].nil? ? User.find(params[:id]) : current_user
-    authorize @user
+
+    #authorize @user
   end
 
 end

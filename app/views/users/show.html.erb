@@ -1,24 +1,24 @@
 <div class="row">
 <%= link_to 'Add Kid', { controller: :kids, action: :new }, class: "button radius" %>
 
-<!-- <div id="comments"> -->
-<!-- <h4>Kids</h4> -->
+
   <div class="row">
     <div class="large-6 columns">
           <% @user.kids.includes(:reminders).each do |kid| %>
+          <%= kid.name %>
           <% kid.reminders.each do |reminder| %>
+
         <ul class="inline-list">
           <li class="left"><p><%= kid.name %> took <strong> <%= reminder.name %></strong>
             <%= time_ago_in_words(reminder.updated_at) %> ago </p></li>
            <li class="right"><%= form_for reminder do |f| %>
                  <%= f.submit "Reset!", class: "button tiny radius"  %></li>
            </ul>
+
                <% end %>
         <% end %>
       <% end %>
         </div>
   </div>
-      <!-- <div class="large&#45;6 columns"> -->
-    <!-- </div> -->
-</div>
+
 </div>

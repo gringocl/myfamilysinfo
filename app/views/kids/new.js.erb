@@ -1,0 +1,14 @@
+$("#new_grouping").html("<%= escape_javascript(...) %>">
+<h1>Add Kid</h1>
+
+
+<%= form_for [:user, @kid] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.fields_for :relationships do |r| %>
+    <%= r.select :role, options_for_select(["Mother","Father"]) %>
+    <%# r.input :user, as: :hidden, input_html: { value: current_user } %>
+  <% end %>
+
+  <%= f.submit %>
+<% end %>
