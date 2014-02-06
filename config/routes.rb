@@ -4,6 +4,7 @@ Myfamilysinfo::Application.routes.draw do
  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
 
+  get ':users/:id/', :to => "user#show"
 
   #resources :users, :path => "user"
   resource :user, { controller: :users, only: :show } do
