@@ -51,7 +51,7 @@ feature "User authentication" do
         })
     click_on "Sign in with Twitter"
     #binding.pry
-    save_and_open_page
+    #save_and_open_page
     page.must_have_content "test_twitter_user, you are signed in!"
   end
 end
