@@ -10,7 +10,7 @@ feature "Manage your kids reminders" do
 
   scenario "Add a new reminder for your kid" do
     sign_in(:mother)
-    save_and_open_page
+    #save_and_open_page
     page.find("a[href='#{new_user_kid_reminder_path(kids(:Jenny))}']").click
     #click_on "button radius tiny success for #{kids(:Jenny).name}"
     fill_in "reminder_name", with: "Tylenol"
