@@ -1187,7 +1187,7 @@ $button-disabled-opacity: 0.9;
 //
 
 // $include-html-visibility-classes: $include-html-classes;
+@import 'foundation';
 .custom-success {
   $bg: rgba($success-color,0.1);
 }
-@import 'foundation';
