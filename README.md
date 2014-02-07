@@ -10,7 +10,6 @@ By [Liam Buell](https://github.com/Lbuell/),
 
 [![Build Status](https://travis-ci.org/gringocl/myfamilysinfo.png?branch=master)](https://travis-ci.org/gringocl/myfamilysinfo)
 
-
 [![Code Climate](https://codeclimate.com/github/gringocl/myfamilysinfo.png)](https://codeclimate.com/github/gringocl/myfamilysinfo)
 
 ## Description
