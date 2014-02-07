@@ -1,22 +1,130 @@
+<% user_kids = @user.kids.includes(:reminders) %>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <!-- Shows -->
+            <div class="large-8 small-6 columns">
 
- <h4><span data-tooltip class="has-tip" title="Click here to add a kid!">
-    <%= link_to(new_user_kid_path, class: "custom-success" ) do  %>
-Add a kid: <i class="fi-torsos-all"></i>
-<% end %></span></h4>
-        <% @user.kids.includes(:reminders).each do |kid| %>
-          <hr><h6><%= kid.name  %>'s reminders  <span data-tooltip class="has-tip" title="<%= "Click here to add a reminder for #{kid.name}"  %>">
-            <%= link_to((new_user_kid_reminder_path [kid]), class: "button tiny success radius") do %>
-              <strong><i class="fi-plus"></i></strong>
-                <% end %></span>
+
+<dl class="tabs vertical" data-tab style="width: 30%">
+  
+  <dd>
+    <%= link_to 'Kids', "#"  %>
+  </dd>
+  <% user_kids.each_with_index do |kid, i| %>
+    <% if i == 0 %>
+      <dd class="active"><%= link_to kid.name.titleize, "#kid-#{i+1}" %></dd>
+    <% else %>
+      <dd><%= link_to kid.name.titleize, "#kid-#{i+1}" %></dd>
+    <% end %>
+  <% end %>
+</dl>
+
+
+            <!-- Image -->
+
+            <div class="tabs-content panel" align="justify" style="float: left; width: 70%">
+  <% user_kids.each_with_index do |kid, i| %>
+    <% if i == 0 %>
+      <div class="content active" id="kid<%= "-#{i+1}" %>">
+    <% else %>
+      <div class="content" id="kid<%= "-#{i+1}" %>">
+    <% end %>
+              <ul class="button-group radius">
+                <li>
+                  <span data-tooltip class="has-tip" title="<%= "Click here to add a reminder for #{kid.name}"  %>">
+                    <%= link_to((new_user_kid_reminder_path [kid]), class: "button  radius tiny success") do %>
+                      <i class="fi-plus"></i>
+                    <% end %>
+                  </span>
+                </li>
+                <li>
+                  <span data-tooltip class="has-tip" title="<%= "Click here to remove #{kid.name}"  %>">
                     <%= link_to(kid, method: :delete, data: { confirm: "are you sure?"}, class: "button radius tiny alert") do %>
                       <i class="fi-torso"></i>
-                    <% end %></h6>
-              <% kid.reminders.each do |reminder| %>
-                    <p><%= kid.name %> took <strong> <%= reminder.name %>
-                      <%= time_ago_in_words(reminder.updated_at) %> ago </p>
-                        <%= form_for reminder do |f| %>
-                          <%= f.submit "Reset!", class: "button tiny radius"  %>
-                        <% end %>
-                        <%= link_to "Delete!", reminder, method: :delete, data: { confirm: "Are you sure?"}, class: "button tiny radius alert"  %>
-                <% end %>
+                    <% end %>
+                  </span>
+                </li>
+                <li class="right">
+                <h6>
+                  <%= kid.name  %>'s reminders
+                </h6>
+                </li>
+              </ul>
+            <% kid.reminders.each do |reminder| %>
+              <h6>... took <strong><%= reminder.name %></strong> <%= time_ago_in_words(reminder.updated_at) %> ago</h6>
+              <%= form_for reminder do |f| %>
+                <%= f.submit "Reset!", class: "button tiny radius"  %>
               <% end %>
+                <%= link_to "Delete!", reminder, method: :delete, data: { confirm: "Are you sure?"}, class: "button tiny radius alert"  %>
+              <% end %>
+      </div>
+    <% end %>
+            </div>
+
+            </div>
+            <!-- End Image -->
+
+
+            <!-- Feed -->
+
+            <div class="large-4 small-12 columns">
+
+              <div class="text-center panel">
+                <h5><a href="#">Use our App!</a></h5>
+
+                <h6 class="subheader">
+                  First click add a kid, then click add a reminder, then you are rockin!
+                </h6>
+
+                <h6><a href="#">Sign Up Now! </a></h6>
+              </div>
+
+              <div class="text-center panel hide-for-small">
+                <a class="button radius medium" href="#">Add a Kid</a>
+              </div>
+
+              <div class="text-center panel hide-for-small">
+                <a class="button radius text-center" href="#">Add a Reminder</a>
+              </div>
+
+
+            </div>
+
+            <!-- End Feed -->
+
+          </div>
+        </div>
+      </div>
+
+    <!-- End Content -->
+
+
+    <!-- Footer -->
+
+      <footer class="row">
+        <div class="large-12 columns"><hr>
+            <div class="row">
+
+              <div class="large-6 columns">
+                  <p>&copy; Copyright no one at all. Go to town.</p>
+              </div>
+
+              <div class="large-6 small-12 columns">
+                  <ul class="inline-list right">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                  </ul>
+              </div>
+
+            </div>
+        </div>
+      </footer>
+
+    <!-- End Footer -->
+
+    </div>
+  </div>
+
