@@ -8,6 +8,9 @@
 By [Liam Buell](https://github.com/Lbuell/),
 [Miles Starkenburg](https://github.com/gringocl/)
 
+[![Build Status](https://travis-ci.org/gringocl/myfamilysinfo.png?branch=master)](https://travis-ci.org/gringocl/myfamilysinfo)
+
+
 [![Code Climate](Code Climate Badge IMG URL goes here)](Code Climate URL goes here)
 
 ## Description
