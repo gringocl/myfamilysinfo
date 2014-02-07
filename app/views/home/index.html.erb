@@ -1,124 +1,61 @@
+
+
       <div class="row">
         <div class="large-12 columns">
           <div class="row">
             <!-- Shows -->
-            <div class="large-4 small-6 columns">
-
-              <h4>Kids</h4><hr>
-
-              <div class="row">
-                <div class="large-1 column">
-                  <img src="http://placehold.it/50x50&amp;text=[img]">
-                </div>
-
-                <div class="large-9 columns">
-                  <h5><a href="#">Jon</a></h5>
-                  <h6 class="subheader show-for-small">Doors at 00:00pm</h6>
-                </div>
-              </div><hr>
-
-              <div class="hide-for-small">
-                <div class="row">
-                  <div class="large-1 column">
-                    <img src="http://placehold.it/50x50&amp;text=[img]">
-                  </div>
-
-                  <div class="large-9 columns">
-                    <h5 class="subheader"><a href="#">Erik</a></h5>
-                  </div>
-                </div><hr>
-
-                <div class="row">
-                  <div class="large-1 column">
-                    <img src="http://placehold.it/50x50&amp;text=[img]">
-                  </div>
-
-                  <div class="large-9 columns">
-                    <h5 class="subheader"><a href="#">Cora</a></h5>
-                  </div>
-                </div><hr>
-
-                <div class="row">
-                  <div class="large-1 column">
-                    <img src="http://placehold.it/50x50&amp;text=[img]">
-                  </div>
-
-                  <div class="large-9 columns">
-                    <h5 class="subheader"><a href="#">Miles</a></h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <!-- Image -->
-
-            <div class="large-4 small-6 columns">
-              <img src="http://www.zastavki.com/pictures/1366x768/2009/People_Children_A_young_mother_with_a_child___children_012762_.jpg">
-            </div>
-
-            <!-- End Image -->
-
-
-            <!-- Feed -->
-
-            <div class="large-4 small-12 columns">
-
-              <div class="text-center panel">
+            <div class="large-8 small-6 columns">
+<dl class="tabs vertical" data-tab style="width: 30%">
+  <dd><a href="#">Kids</a></dd>
+  <dd class="active"><a href="#kid1">Mikey</a></dd>
+  <dd><a href="#kid2">Susy</a></dd>
+  <dd><a href="#kid3">Jodey</a></dd>
+  <dd><a href="#kid4">Brandon</a></dd>
+</dl>
+<div class="tabs-content vertical panel text-center" align="left" style="float: right; width: 70%">
+  <div class="content active " id="kid1">
                 <h5><a href="#">Use our App!</a></h5>
-
                 <h6 class="subheader">
                   First click add a kid, then click add a reminder, then you are rockin!
                 </h6>
-
                 <h6><a href="#">Sign Up Now! </a></h6>
-              </div>
-
-              <div class="text-center panel hide-for-small">
-                <a class="button radius medium" href="#">Add a Kid</a>
-              </div>
-
-              <div class="text-center panel hide-for-small">
-                <a class="button radius text-center" href="#">Add a Reminder</a>
-              </div>
-
-
-            </div>
-
-            <!-- End Feed -->
-
-          </div>
-        </div>
-      </div>
-
-    <!-- End Content -->
-
-
-    <!-- Footer -->
-
-      <footer class="row">
-        <div class="large-12 columns"><hr>
-            <div class="row">
-
-              <div class="large-6 columns">
-                  <p>&copy; Copyright no one at all. Go to town.</p>
-              </div>
-
-              <div class="large-6 small-12 columns">
-                  <ul class="inline-list right">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
-                  </ul>
-              </div>
-
-            </div>
-        </div>
-      </footer>
-
-    <!-- End Footer -->
-
-    </div>
   </div>
+  <div class="content" id="kid2">
+    <h5><a href="#">Use our App!</a></h5>
+                <h6 class="subheader">
+                  First click add a kid, then click add a reminder, then you are rockin!
+                </h6>
+                <h6><a href="#">Sign Up Now! </a></h6>
+  </div>
+  <div class="content" id="kid3">
+                <h5><a href="#">Use our App!</a></h5>
+                <h6 class="subheader">
+                  First click add a kid, then click add a reminder, then you are rockin!
+                </h6>
+                <h6><a href="#">Sign Up Now! </a></h6>
+  </div>
+  <div class="content" id="kid4">
+                <h5><a href="#">Use our App!</a></h5>
+                <h6 class="subheader">
+                  First click add a kid, then click add a reminder, then you are rockin!
+                </h6>
+                <h6><a href="#">Sign Up Now! </a></h6>
+  </div>
+</div>
+</div>
+            <div class="large-4 small-12 columns">
 
+
+              <div class="text-center panel hide-for-small">
+                <%= link_to '#', class: "custom-success" do  %>
+                  Add a kid: <i class="fi-torsos-all"></i>
+                  <% end %>
+              </div>
+
+
+
+            </div>
+    </div>
+    </div>
+
+  </div>

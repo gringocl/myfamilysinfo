@@ -1203,7 +1203,13 @@ $disabled: false;
 // $is-input - <input>'s and <button>'s take on strange padding. We added this to help fix that. Default:false
 $is-input: false;
 .custom-success {
-  @include button($padding, $bg, $radius, $full-width, $disabled, $is-input);
+  @include button($padding, rgba($success-color,0.7), $radius, $full-width, $disabled, $is-input);
+}
+.custom-alert {
+  @include button($padding, rgba($alert-color,0.7), $radius, $full-width, $disabled, $is-input);
+}
+.custom-primary {
+  @include button($padding, rgba($primary-color,0.7), $radius, $full-width, $disabled, $is-input);
 }
 body {
   background-image: url(image_path('hoffman.png'));

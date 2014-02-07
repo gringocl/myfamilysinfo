@@ -1,30 +1,16 @@
   <div class="row">
 
     <!-- Contact Details -->
-    <div class="large-9 columns">
+    <div class="large-9 panel columns">
 
       <h3>Add a Reminder!</h3>
       <p>Put in anything you like! </em></p>
-        <a class="custom-success">
+        <a>
 
         <h2>Reminder For <%= @kid.name %></h2>
         <%= simple_form_for [:user, @kid, @reminder] do |f| %>
         <%= f.input :name, label: 'What are you going to give me?' %>
         <button class="radius button" type="submit">Add</button>
              <% end %>
-
-        </a>
-      <div class="section-container tabs" data-section>
-        <section class="section">
-          <div class="content" data-slug="panel1">
-            <form>
-              <div class="row collapse">
-
-              </div>
-            </form>
-          </div>
-        </section>
-
-      </div>
-    </div>
-
+     </div>
+     </div>

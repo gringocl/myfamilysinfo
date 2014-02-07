@@ -1,11 +1,11 @@
   <div class="row">
 
     <!-- Contact Details -->
-    <div class="large-9 columns">
+    <div class="large-9 panel columns">
 
       <h3>Add a Kid!</h3>
       <p>Simply put your kids name in the field below, hit add and you are golden!</em></p>
-        <a class="custom-success">
+        <a>
 
                  <h1>Kiddo</h1>
           <%= form_for [:user, @kid] do |f| %>
@@ -13,18 +13,5 @@
         <%= f.text_field :name %>
         <button class="radius button" type="submit">Add</button>
              <% end %>
-
-        </a>
-      <div class="section-container tabs" data-section>
-        <section class="section">
-          <div class="content" data-slug="panel1">
-            <form>
-              <div class="row collapse">
-
-              </div>
-            </form>
-          </div>
-        </section>
-
-      </div>
-    </div>
+             </div>
+             </div>
