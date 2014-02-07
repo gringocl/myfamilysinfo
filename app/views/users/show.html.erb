@@ -1,8 +1,8 @@
-<h4>Add a kid:
-  <span data-tooltip class="has-tip" title="Click here to add a kid!">
-    <%= link_to(new_user_kid_path, class: "button small custom-success radius" ) do  %>
-<i class="fi-torsos-all"></i>
-<% end %></h4></span>
+
+ <h4><span data-tooltip class="has-tip" title="Click here to add a kid!">
+    <%= link_to(new_user_kid_path, class: "custom-success" ) do  %>
+Add a kid: <i class="fi-torsos-all"></i>
+<% end %></span></h4>
         <% @user.kids.includes(:reminders).each do |kid| %>
           <hr><h6><%= kid.name  %>'s reminders  <span data-tooltip class="has-tip" title="<%= "Click here to add a reminder for #{kid.name}"  %>">
             <%= link_to((new_user_kid_reminder_path [kid]), class: "button tiny success radius") do %>

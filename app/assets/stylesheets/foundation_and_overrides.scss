@@ -50,7 +50,7 @@
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: #008CBA;
 $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -985,10 +985,10 @@ $button-disabled-opacity: 0.9;
 
 // $include-html-tooltip-classes: $include-html-classes;
 
-// $has-tip-border-bottom: dotted 1px #ccc;
+$has-tip-border-bottom: dotted 0px #ccc;
 // $has-tip-font-weight: bold;
 // $has-tip-font-color: #333;
-// $has-tip-border-bottom-hover: dotted 1px scale-color($primary-color, $lightness: -55%);
+$has-tip-border-bottom-hover: dotted 0px scale-color($primary-color, $lightness: -55%);
 // $has-tip-font-color-hover: $primary-color;
 // $has-tip-cursor-type: help;
 
@@ -1188,6 +1188,21 @@ $button-disabled-opacity: 0.9;
 
 // $include-html-visibility-classes: $include-html-classes;
 @import 'foundation';
+
+// Using the available options
+// $padding - Used to build padding for buttons Default: $button-med or rem-calc(12)
+$padding: $button-sml;
+// Primary color set in settings file. Default: $primary-color.
+$bg: rgba($success-color,0.7);
+// If true, set to button radius which is $global-radius or explicitly set radius amount in px (ex. $radius:10px). Default:false.
+$radius: true;
+// We can set $full-width:true to remove side padding extend width. Default:false
+$full-width: false;
+// We can set $disabled:true to create a disabled transparent button. Default:false
+$disabled: false;
+// $is-input - <input>'s and <button>'s take on strange padding. We added this to help fix that. Default:false
+$is-input: false;
 .custom-success {
-  $bg: rgba($success-color,0.1);
+  @include button($padding, $bg, $radius, $full-width, $disabled, $is-input);
 }
+
