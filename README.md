@@ -8,7 +8,9 @@
 By [Liam Buell](https://github.com/Lbuell/),
 [Miles Starkenburg](https://github.com/gringocl/)
 
-[![Code Climate](Code Climate Badge IMG URL goes here)](Code Climate URL goes here)
+[![Build Status](https://travis-ci.org/gringocl/myfamilysinfo.png?branch=master)](https://travis-ci.org/gringocl/myfamilysinfo)
+
+[![Code Climate](https://codeclimate.com/github/gringocl/myfamilysinfo.png)](https://codeclimate.com/github/gringocl/myfamilysinfo)
 
 ## Description
 **myfamilysinfo** A simple recurring reminder app to help parent and/or guardians remember important info about their children.

@@ -3,20 +3,19 @@ require "test_helper"
 feature "Add a kid" do
   scenario "Add a new kid" do
     sign_in(:mother)
-    click_on "Add Kid"
+    #save_and_open_page
+    click_on "Add a kid"
     fill_in "Name", with: "Tim"
-    click_on "Create Kid"
+    click_on "Add"
     page.must_have_content "Tim"
-    page.must_have_content "Remove Kid"
+    #page.must_have_content "Remove Kid"
   end
 
   scenario "Delete a kid" do
     sign_in(:mother)
+    page.find("a[data-confirm][href='#{kid_path(kids(:Jenny))}']").click
+    #first(:link, 'Delete!').click
     save_and_open_page
-    find "Jenny"
-    click_on "Remove Kid"
-    page.must_have_content "Are you sure?"
-    click_on "Yes"
-    page.must_have_content "Kid Removed"
+    page.must_have_content "Jenny was removed from your account"
   end
 end

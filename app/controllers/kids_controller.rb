@@ -21,11 +21,6 @@ class KidsController < ApplicationController
     redirect_to user_path, notice: "#{@kid.name} was removed from your account"
   end
 
-  def destroy
-    @kid = Kid.find(params[:id])
-    @kid.destroy 
-    redirect_to user_path, notice: "Kid Removed"
-  end
 
   private
     def kid_params

@@ -3,7 +3,7 @@ require "test_helper"
 feature "Manage your kids reminders" do
   scenario "View your kids reminders" do
     sign_in(:mother)
-    save_and_open_page
+    #save_and_open_page
     page.must_have_content "Jenny"
     page.must_have_content "Advil"
   end
@@ -19,7 +19,7 @@ feature "Manage your kids reminders" do
 
   scenario "Update a current reminder" do
     sign_in(:mother)
-    save_and_open_page
+    #save_and_open_page
     find
     page.must_have_content "Updated!"
     page.must_have_content "less than a minute ago"
