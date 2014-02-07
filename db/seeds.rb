@@ -35,7 +35,15 @@ begin
 
   kid = Kid.all.each do |k|
     user = User.order( 'RANDOM()' ).first
-    relation = Relationship.create ({kid: k, user: user, role: "Father"})
+    relation = Relationship.create ({kid: k, user: user})
     relation.save!
+  end
+
+  Kid.all.each do |k|
+    rand(4).times do
+      kid = k.reminders.create
+      kid.name = Faker::Product.product_name
+      kid.save!
+    end
   end
 end
