@@ -1,13 +1,30 @@
-<h1>Add Kid</h1>
+  <div class="row">
 
+    <!-- Contact Details -->
+    <div class="large-9 columns">
 
-<%= form_for [:user, @kid] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.fields_for :relationships do |r| %>
-    <%= r.select :role, options_for_select(["Mother","Father"]) %>
-    <%# r.input :user, as: :hidden, input_html: { value: current_user } %>
-  <% end %>
+      <h3>Add a Kid!</h3>
+      <p>Simply put your kids name in the field below, hit add and you are golden!</em></p>
+        <a class="custom-success">
 
-  <%= f.submit %>
-<% end %>
+                 <h1>Kiddo</h1>
+          <%= form_for [:user, @kid] do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <button class="radius button" type="submit">Add</button>
+             <% end %>
+
+        </a>
+      <div class="section-container tabs" data-section>
+        <section class="section">
+          <div class="content" data-slug="panel1">
+            <form>
+              <div class="row collapse">
+
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </div>
