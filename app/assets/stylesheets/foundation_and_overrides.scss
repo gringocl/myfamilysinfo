@@ -47,7 +47,7 @@
 // We use these to control text direction settings
 // $text-direction: ltr;
 // $opposite-direction: right;
-// $default-float: left;
+$default-float: right;
 
 // We use these as default colors throughout
 $primary-color: #008CBA;
@@ -211,7 +211,7 @@ $button-sml: rem-calc(8);
 // $button-lrg: rem-calc(18);
 
 // We use this to control the display property.
-// $button-display: inline-block;
+$button-display: inline;
 $button-margin-bottom: rem-calc(13);
 
 // We use these to control button text styles.
@@ -950,17 +950,17 @@ $button-disabled-opacity: 0.9;
 // $include-html-tabs-classes: $include-html-classes;
 
 // $tabs-navigation-padding: rem-calc(16);
-// $tabs-navigation-bg-color: #efefef  ;
-// $tabs-navigation-active-bg-color: #fff;
+$tabs-navigation-bg-color: scale-color(#fff, $lightness: -5%);
+$tabs-navigation-active-bg-color: scale-color(#fff, $lightness: -15%);
 // $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
 // $tabs-navigation-font-color: #222;
 // $tabs-navigation-font-size: rem-calc(16);
 // $tabs-navigation-font-family: $body-font-family;
 
 // $tabs-content-margin-bottom: rem-calc(24);
-// $tabs-content-padding: $column-gutter/2;
+$tabs-content-padding: rem-calc(24);
 
-// $tabs-vertical-navigation-margin-bottom: 1.25rem;
+// $tabs-vertical-navigation-margin-bottom: 0.25rem;
 
 //
 // THUMBNAILS
@@ -1017,7 +1017,7 @@ $has-tip-border-bottom-hover: dotted 0px scale-color($primary-color, $lightness:
 
 // Height and margin
 // $topbar-height: 45px;
-// $topbar-margin-bottom: 0;
+$topbar-margin-bottom: 25px;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: normal;
@@ -1205,4 +1205,8 @@ $is-input: false;
 .custom-success {
   @include button($padding, $bg, $radius, $full-width, $disabled, $is-input);
 }
+body {
+  background-image: url(image_path('hoffman.png'));
+}
+
 
