@@ -21,6 +21,8 @@
 </dl>
 
 
+
+
             <!-- Image -->
 
             <div class="tabs-content panel" align="left" style="float: right; width: 70%">
@@ -33,14 +35,14 @@
               <ul class="button-group radius">
                 <li>
                   <span data-tooltip class="has-tip" title="<%= "Click here to add a reminder for #{kid.name}"  %>">
-                    <%= link_to((new_user_kid_reminder_path [kid]), class: "button  radius tiny success") do %>
+                    <%= link_to((new_user_kid_reminder_path [kid]), class: "button  radius tiny custom-success") do %>
                       <i class="fi-plus"></i>
                     <% end %>
                   </span>
                 </li>
                 <li>
                   <span data-tooltip class="has-tip" title="<%= "Click here to remove #{kid.name}"  %>">
-                    <%= link_to(kid, method: :delete, data: { confirm: "are you sure?"}, class: "button radius tiny alert") do %>
+                    <%= link_to(kid, method: :delete, data: { confirm: "are you sure?"}, class: "button radius tiny custom-alert") do %>
                       <i class="fi-torso"></i>
                     <% end %>
                   </span>
@@ -53,21 +55,21 @@
               </ul>
             <% kid.reminders.each do |reminder| %>
               <ul class="button-group radius">
-              <li class="left">
-                <h6>... took <strong><%= reminder.name %></strong> <%= time_ago_in_words(reminder.updated_at) %> ago  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        </h6>
-              </li>
                 <li>
                 <%= form_for reminder do |f| %>
-                  <%= button_tag(type: 'submit', class: "button tiny radius") do %>
+                  <%= button_tag(type: 'submit', class: "button tiny radius custom-primary") do %>
                     <i class="fi-refresh"></i>
                   <% end %>
                 <% end %>
                 </li>
                 <li >
-                <%= link_to reminder, method: :delete, data: { confirm: "Are you sure?"}, class: "button tiny radius alert" do  %>
+                <%= link_to reminder, method: :delete, data: { confirm: "Are you sure?"}, class: "button tiny radius custom-alert" do  %>
                   <i class="fi-x"></i>
                 <% end %>
                 </li>
+              <li class="left">
+                <h6> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ... took <strong><%= reminder.name %></strong> <%= time_ago_in_words(reminder.updated_at) %> ago</h6>
+              </li>
               </ul>
               <% end %>
       </div>
@@ -96,6 +98,6 @@
 
           </div>
         </div>
+
       </div>
-
-
+      </div>
