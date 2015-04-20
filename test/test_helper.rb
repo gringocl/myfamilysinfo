@@ -7,14 +7,6 @@ require "minitest/pride"
 require 'pry-rescue/minitest'
 require 'simplecov'
 SimpleCov.start
-# require 'turn/autorun'
-
-# Turn.config do |c|
-#     c.format = :outline
-#     c.trace = "0"
-#     c.natural = true
-#     c.verbose = true
-# end
 
 class ActionDispatch::IntegrationTest
   include Rails.application.routes.url_helpers
