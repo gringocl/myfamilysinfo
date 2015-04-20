@@ -39,5 +39,4 @@ group :test do
   gem 'launchy'
   gem 'minitest-rails-capybara'
   gem 'simplecov'
-  gem 'turn'
 end

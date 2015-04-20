@@ -3,6 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Myfamilysinfo::Application.load_tasks
-
-MiniTest::Rails::Testing.default_tasks << "features"
+Rails.application.load_tasks
