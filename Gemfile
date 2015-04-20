@@ -18,12 +18,14 @@ gem 'pundit'
 gem 'rails'
 gem 'sass-rails'
 gem 'simple_form'
+gem 'thin'
 gem 'uglifier'
 gem 'webhostinghub-glyphs-rails'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
+  gem 'foreman'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'pry-stack_explorer'
@@ -39,5 +41,4 @@ group :test do
   gem 'launchy'
   gem 'minitest-rails-capybara'
   gem 'simplecov'
-  gem 'turn'
 end
